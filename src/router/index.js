@@ -11,17 +11,17 @@ export default new Router({
   routes: [
     {
       path: '/',
-      name: 'HelloWorld',
+      name: 'index',
       redirect(){
-        return '/HelloWorld'
+        return '/index'
       }
     },
     {
-      path: '/HelloWorld',
-      name: 'HelloWorld',
-      // component: HelloWorld
+      path: '/index',
+      name: 'index',
+      // component: index
       // 配置路由懒加载的写法
-      component:reslove => (require(["@/components/HelloWorld"],reslove))
+      component:reslove => (require(["@/index"],reslove))
     }
   ]
 })
